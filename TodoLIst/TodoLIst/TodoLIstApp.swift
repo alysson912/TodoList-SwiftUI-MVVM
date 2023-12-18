@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+
 @main
 struct TodoLIstApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack { // todas as views do app terão uma NavigationView
+                ListView()
+            }
+            
         }
     }
 }
