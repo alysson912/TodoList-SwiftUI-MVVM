@@ -9,23 +9,31 @@ import SwiftUI
 
 struct ListView: View {
     
-     @EnvironmentObject var viewModel: ListViewModel
+    @EnvironmentObject var viewModel: ListViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.items) { item  in
-               ListRowView(item: item)
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            viewModel.updateItem(item: item)
-                        }
+        
+        ZStack {
+            if viewModel.items.isEmpty {
+                NoItemsView()
+                    .transition(AnyTransition.opacity.animation(.easeIn))
+            } else {
+                List {
+                    ForEach(viewModel.items) { item  in
+                        ListRowView(item: item)
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    viewModel.updateItem(item: item)
+                                }
+                            }
                     }
+                    .onDelete(perform: viewModel.deleteItem)
+                    .onMove(perform: viewModel.moveItem)
+                }
+                .listStyle(.plain)
             }
-            .onDelete(perform: viewModel.deleteItem)
-            .onMove(perform: viewModel.moveItem)
         }
-        .listStyle(.plain)
-        .navigationTitle("Todo List ( ͡° ͜ʖ ͡°)")
+        .navigationTitle("Todo List")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 EditButton()
@@ -36,12 +44,13 @@ struct ListView: View {
             }
         }
     }
-    
 }
+
+
 
 #Preview ("This is the first title"){
     NavigationStack {
-       ListView()
+        ListView()
     }
     .environmentObject(ListViewModel())
 }
