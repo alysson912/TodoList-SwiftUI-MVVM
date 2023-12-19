@@ -18,6 +18,8 @@ struct TodoLIstApp: App {
             NavigationStack { // todas as views do app terão uma NavigationView
                 ListView()
             }
+         //   .navigationViewStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Navigation View Style@*/DefaultNavigationViewStyle()/*@END_MENU_TOKEN@*/) will be deprecated
+           
             .environmentObject(listViewModel)
         }
     }

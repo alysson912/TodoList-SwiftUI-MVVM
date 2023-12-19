@@ -18,15 +18,16 @@ struct AddView: View {
     
     var body: some View {
         ZStack {
-            Color.indigo.ignoresSafeArea()
+            Color.clear.ignoresSafeArea()
             ScrollView {
                 VStack {
                     TextField("Type something here", text: $textFieldText)
+                        .padding(.horizontal)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(colorScheme == .light ? .white : .white)
+                        .background(Color(UIColor.secondarySystemBackground))
                         .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .padding(.horizontal)
+                    
                     
                     
                     Button(action: {
@@ -40,10 +41,12 @@ struct AddView: View {
                             .background(Color.accentColor)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     })
-                    .padding(.horizontal)
+                    
                 }
                 .padding(14)
+                .frame(maxWidth: 400)
             }
+           
             .navigationTitle("Add an Item")
             .alert(alertTitle, isPresented: $showAlert) {
                 getAlert(text: "voltar" )
@@ -74,8 +77,11 @@ struct AddView: View {
 }
 
 #Preview {
-    NavigationStack {
-        AddView()
-    }
-    .environmentObject(ListViewModel())
+        NavigationStack {
+            AddView()
+        }
+        .preferredColorScheme(.dark)
+        .environmentObject(ListViewModel())
+      
 }
+

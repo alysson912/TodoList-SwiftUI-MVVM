@@ -33,6 +33,7 @@ struct ListView: View {
                 .listStyle(.plain)
             }
         }
+        .frame(maxWidth: 1100)
         .navigationTitle("Todo List")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
