@@ -9,13 +9,17 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State var items: [String] = ["Orange", "Banana", "Tomato"]
+    @State var items: [ItemModel] = [
+    ItemModel(title: "Iphone", isCompleted: true),
+    ItemModel(title: "Mac", isCompleted: true),
+    ItemModel(title: "Ipad", isCompleted: false),
+    ]
     
     
     var body: some View {
         List {
-            ForEach(items, id: \.self) { item  in
-                ListRowView(title: item)
+            ForEach(items) { item  in
+               ListRowView(item: item)
             }
         }
         .listStyle(.plain)
@@ -32,9 +36,9 @@ struct ListView: View {
     }
 }
 
-#Preview {
+#Preview ("This is the first title"){
     NavigationStack {
-        ListView()
+       ListView()
     }
     
 }
