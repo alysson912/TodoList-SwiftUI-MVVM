@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ItemModel: Identifiable {
+struct ItemModel: Identifiable, Codable {
     let id: String //= UUID().uuidString // func onde o item receberá um ID aleatorio
     let title: String
     let isCompleted: Bool
