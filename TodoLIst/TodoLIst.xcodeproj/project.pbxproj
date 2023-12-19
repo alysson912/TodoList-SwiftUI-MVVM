@@ -10,6 +10,7 @@
 		4B348B182B30DB1D0060537D /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B348B172B30DB1D0060537D /* ListRowView.swift */; };
 		4B348B1A2B30DE530060537D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B348B192B30DE530060537D /* AddView.swift */; };
 		4B348B1F2B3114B30060537D /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B348B1E2B3114B30060537D /* ItemModel.swift */; };
+		4BA0CC2E2B31D3CD00994D2C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CC2D2B31D3CD00994D2C /* ListViewModel.swift */; };
 		4BCE44792B30BFE5001FDC95 /* TodoLIstApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE44782B30BFE5001FDC95 /* TodoLIstApp.swift */; };
 		4BCE447D2B30BFE6001FDC95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE447C2B30BFE6001FDC95 /* Assets.xcassets */; };
 		4BCE44802B30BFE6001FDC95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE447F2B30BFE6001FDC95 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		4B348B172B30DB1D0060537D /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		4B348B192B30DE530060537D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		4B348B1E2B3114B30060537D /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		4BA0CC2D2B31D3CD00994D2C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4BCE44752B30BFE5001FDC95 /* TodoLIst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoLIst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE44782B30BFE5001FDC95 /* TodoLIstApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLIstApp.swift; sourceTree = "<group>"; };
 		4BCE447C2B30BFE6001FDC95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		4B348B1D2B3114A20060537D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4BA0CC2D2B31D3CD00994D2C /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				4B348B1A2B30DE530060537D /* AddView.swift in Sources */,
 				4BCE44792B30BFE5001FDC95 /* TodoLIstApp.swift in Sources */,
+				4BA0CC2E2B31D3CD00994D2C /* ListViewModel.swift in Sources */,
 				4BCE44882B30C244001FDC95 /* ListView.swift in Sources */,
 				4B348B1F2B3114B30060537D /* ItemModel.swift in Sources */,
 				4B348B182B30DB1D0060537D /* ListRowView.swift in Sources */,
